@@ -1,0 +1,18 @@
+{
+  "name": "covid_tracker",
+  "version": "1.0.0",
+  "description": "A covid tracker api for world and india , and provides covid related news and tweets ",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon App.js"
+  },
+  "author": "blackcat",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  }
+}

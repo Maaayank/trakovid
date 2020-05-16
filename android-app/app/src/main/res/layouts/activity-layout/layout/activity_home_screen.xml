@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themeBlack"
+    android:orientation="vertical"
+    tools:context=".Activities.HomeScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp">
+
+        <ImageView
+            android:id="@+id/menuButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:tint="@color/themeWhite"
+            android:background="@color/transparent"
+            android:src="@drawable/menu"/>
+
+        <TextView
+            android:id="@+id/fragTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:textSize="18dp"
+            android:text="Dashboard"/>
+
+    </LinearLayout>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/layout_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/themeBlack_traslucent"
+            android:theme="@style/Theme.AppCompat.navTheme"
+            app:headerLayout="@layout/drawer_header"
+            app:menu="@menu/burger_menu"
+            />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/themeBlack"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginVertical="50dp"
+        android:src="@drawable/logo"/>
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="An Application to track Corona Cases at diffrent Levels . \n Info about the Apis used \n other poins how to use  \n credits to developer \n \n unoffical data and blah blah \n \n \n Stay Home Stay Safe "/>
+
+</LinearLayout>

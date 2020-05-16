@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="fontFamily">monospace</item>
+    </style>
+
+    <style name="Theme.AppCompat.navTheme">
+
+        <!-- Color of text and icon when SELECTED -->
+        <item name="colorPrimary">@color/themeWhite</item>
+
+        <!-- Background color when SELECTED -->
+        <item name="colorControlHighlight">@color/themeBlack</item>
+
+    </style>
+
+</resources>

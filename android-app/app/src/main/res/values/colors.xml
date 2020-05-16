@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="themeRed">#E53D00</color>
+    <color name="themeYellow">#FFE900</color>
+    <color name="themeWhite">#FCFFF7</color>
+    <color name="themeBlack">#0A1A1F</color>
+    <color name="themeGreen">#00FF99</color>
+
+    <color name="themeBlack_traslucent">#880A1A1F</color>
+    <color name="themeOffWhite">#88FCFFF7</color>
+
+
+</resources>
