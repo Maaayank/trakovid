@@ -1,4 +1,4 @@
-<p align="center"> <img alt="logo" src="/android-app/app/src/main/res/mipmap-xxxhdpi/app_logo.png" /> </p>
+<p align="center"> <img height="200" width="200" alt="logo" src="/static/covid19_response_icon.svg" /> </p>
 
 
 # trakovid
@@ -38,15 +38,26 @@ An Unofficial covid-19 cases tracking Application , which helps user to track co
   
 ### Screenshots : 
 
+<p align="center"> 
+  <img height="350" width="200" src="/static/world.jpeg"/>
+  <img height="350" width="200" src="/static/india.jpeg"/>
+  <img height="350" width="200" src="/static/maharashtra.jpeg"/>
+</p>
+<p align="center">
+  <img height="350" width="200" src="/static/india2.jpeg"/>
+  <img height="350" width="200" src="/static/unitedkingdom.jpeg"/>
+</p>
 
+-----
   
 ### Future Scope :
+
   - [ ] Integrate news source api for daily covid related articles and tweets .
   - [ ] Add Dashboard for user location specific corona updates .
   - [ ] Add notification manager to notify user on covid cases daily basis .
   
   
-----
+-----
 
 ### Developed as a mini project by 
   - [Mayank Patel](https://github.com/Maaayank)
