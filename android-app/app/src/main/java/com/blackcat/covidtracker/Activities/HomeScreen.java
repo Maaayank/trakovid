@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -34,6 +35,10 @@ public class HomeScreen extends AppCompatActivity {
     private TextView title ;
     private FragmentManager manager;
     private FragmentTransaction fragmentTransaction;
+    private DashBoard dashBoardFrag;
+    private World worldFrag;
+    private About aboutFrag;
+    private India indiaFrag;
 
     private HashMap<String , Fragment.SavedState> fragmentInstances ;
 
@@ -48,7 +53,6 @@ public class HomeScreen extends AppCompatActivity {
         title = findViewById(R.id.fragTitle);
 
         manager = getSupportFragmentManager();
-        fragmentInstances = new HashMap<>();
 
         hamburger.setOnClickListener(v -> {
             if(mDrawer.isDrawerOpen(GravityCompat.START)){
@@ -60,10 +64,14 @@ public class HomeScreen extends AppCompatActivity {
 
         handleDrawer();
 
-        Fragment dashboardFrag = DashBoard.newInstance();
+        worldFrag = World.newInstance();
+        aboutFrag = About.newInstance();
+        indiaFrag = India.newInstance();
+
+
+        title.setText("World");
         manager.beginTransaction()
-                .replace(R.id.container,dashboardFrag)
-                .addToBackStack(dashboardFrag.getClass().getSimpleName())
+                .replace(R.id.container,worldFrag)
                 .commit();
 
     }
@@ -74,32 +82,37 @@ public class HomeScreen extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()){
 
-                case R.id.world_frag :
-                    fragment = World.newInstance();
-                    break;
-
                 case R.id.india_frag :
-                    fragment = India.newInstance();
-                    break;
-
-                case R.id.settings_frag :
-                    fragment = Settings.newInstance();
+                    fragment = indiaFrag;
                     break;
 
                 case R.id.about_frag :
-                    fragment = About.newInstance();
+                    fragment = aboutFrag;
                     break;
 
-                case R.id.news_frag :
-                    fragment = News.newInstance();
+                case R.id.world_frag :
+
+                default :
+
+                    fragment = worldFrag;
                     break;
 
-                case R.id.dashboard_frag :
+//                case R.id.settings_frag :
+//                    fragment = Settings.newInstance();
+//                    break;
+//
+//
+//                case R.id.news_frag :
+//                    fragment = News.newInstance();
+//                    break;
+//
+//                case R.id.dashboard_frag :
+//
+//                default:
+//
+//                    fragment = DashBoard.newInstance();
+//                    break;
 
-                default:
-
-                    fragment = DashBoard.newInstance();
-                    break;
             }
 
             showFragments(fragment);
@@ -112,29 +125,11 @@ public class HomeScreen extends AppCompatActivity {
 
     private void showFragments(Fragment fragment){
 
-        String BACKSTACK_TAG = fragment.getClass().getSimpleName();
-
-        String  f = manager.getBackStackEntryAt( manager.getBackStackEntryCount() - 1).getName();
-        String f2 = fragment.getClass().getSimpleName();
-        fragmentInstances.put(f,manager.saveFragmentInstanceState(manager.findFragmentById(R.id.container)));
-
-        try {
-            if (!f.equals(f2) && !manager.popBackStackImmediate(BACKSTACK_TAG, 0)) {
-
-                if (fragmentInstances.containsKey(f2)) {
-                    fragment.setInitialSavedState(fragmentInstances.get(f2));
-                }
-                fragmentTransaction = manager.beginTransaction();
-                fragmentTransaction.replace(R.id.container, fragment, BACKSTACK_TAG);
-                fragmentTransaction.addToBackStack(BACKSTACK_TAG);
-                fragmentTransaction.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.enter, R.anim.exit);
-                fragmentTransaction.commit();
-                manager.executePendingTransactions();
-
-            }
-        }catch (Exception e){
-
-        }
+        fragmentTransaction = manager.beginTransaction();
+        fragmentTransaction.replace(R.id.container, fragment);
+        fragmentTransaction.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.enter, R.anim.exit);
+        fragmentTransaction.commit();
+        manager.executePendingTransactions();
     }
 
     @Override

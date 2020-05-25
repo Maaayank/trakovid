@@ -16,10 +16,9 @@ public class RetrofitInstance {
         if (retrofit == null) {
 
             retrofit = new retrofit2.Retrofit.Builder()
-                    .baseUrl("https://bd79fdf8.ngrok.io/api/")
+                    .baseUrl("https://statcovid19.herokuapp.com/api/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
-
         }
 
         return  retrofit;

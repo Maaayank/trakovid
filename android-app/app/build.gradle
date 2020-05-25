@@ -19,6 +19,7 @@ android {
 
             res.srcDirs =
                     [
+                            'src/main/res/layouts/dialog-layout',
                             'src/main/res/layouts/activity-layout',
                             'src/main/res/layouts/helper-layout',
                             'src/main/res/layouts/fragment-layout',
@@ -57,4 +58,5 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

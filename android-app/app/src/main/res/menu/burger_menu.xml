@@ -4,12 +4,12 @@
     <group
         android:checkableBehavior="single">
 
-        <item
-            android:id="@+id/dashboard_frag"
-            android:icon="@drawable/dashboard"
-            android:iconTint="@color/themeOffWhite"
-            android:checked="true"
-            android:title="dashboard"/>
+<!--        <item-->
+<!--            android:id="@+id/dashboard_frag"-->
+<!--            android:icon="@drawable/dashboard"-->
+<!--            android:iconTint="@color/themeOffWhite"-->
+<!--            android:checked="true"-->
+<!--            android:title="Dashboard"/>-->
 
         <item
             android:id="@+id/world_frag"
@@ -23,18 +23,18 @@
             android:iconTint="@color/themeOffWhite"
             android:title="India"/>
 
-        <item
-            android:id="@+id/news_frag"
-            android:icon="@drawable/news_icon"
-            android:iconTint="@color/themeOffWhite"
-            android:title="News"/>
+<!--        <item-->
+<!--            android:id="@+id/news_frag"-->
+<!--            android:icon="@drawable/news_icon"-->
+<!--            android:iconTint="@color/themeOffWhite"-->
+<!--            android:title="News"/>-->
 
 
-        <item
-            android:id="@+id/settings_frag"
-            android:icon="@drawable/settings_icon"
-            android:iconTint="@color/themeOffWhite"
-            android:title="Settings"/>
+<!--        <item-->
+<!--            android:id="@+id/settings_frag"-->
+<!--            android:icon="@drawable/settings_icon"-->
+<!--            android:iconTint="@color/themeOffWhite"-->
+<!--            android:title="Settings"/>-->
 
         <item
             android:id="@+id/about_frag"

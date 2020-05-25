@@ -10,8 +10,10 @@
     <color name="themeYellow">#FFE900</color>
     <color name="themeWhite">#FCFFF7</color>
     <color name="themeBlack">#0A1A1F</color>
+    <color name="themeBlackLight">#213135</color>
     <color name="themeGreen">#00FF99</color>
 
+    <color name="themeBlack_traslucent2">#BB0A1A1F</color>
     <color name="themeBlack_traslucent">#880A1A1F</color>
     <color name="themeOffWhite">#88FCFFF7</color>
 
