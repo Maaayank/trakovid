@@ -22,7 +22,7 @@ An Unofficial covid-19 cases tracking Application , which helps user to track co
   - Node.js 
   - Express
   - hosted on heroku at [ statcovid19.herokuapp.com ](https://statcovid19.herokuapp.com/)
-  - for server endpoints request on  [ /info ](https://statcovid19.herokuapp.com)
+  - for server endpoints request on  [ /info ](https://statcovid19.herokuapp.com/info)
   
 ### Features : 
   - Monitors Covid 19 cases worldwide and country wise .
